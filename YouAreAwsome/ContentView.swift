@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var messageString = "When the genious bar needs help they  call you "
+    @State private var messageString = "When the genious bar needs help they  call you " //comment
     
     var body: some View {
 
