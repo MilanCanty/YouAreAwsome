@@ -8,29 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var messageString = "Namaste" //comment
+    @State private var messageString = " " //comment
+    let message1 = "You Are Awesome!"
+    let message2 = "You Are Great!"
     
     var body: some View {
         
         VStack{
-         
+            
             Spacer()
             
-            Image(systemName: "speaker.wave.2",variableValue:0.30)
-                .resizable()
-                .scaledToFit()
-                .symbolRenderingMode(.multicolor)
-                .padding()
-                .background(Color(hue: 0.553, saturation: 0.275, brightness: 1.0))
-                .cornerRadius(30)
-                .shadow(color:.gray,radius: 30, x:20, y:20)
-                .overlay(RoundedRectangle(cornerRadius:30)
-                    .stroke(.teal,lineWidth: 1))
-                .padding()
-                
-                
-            
-        
             Text(messageString)
                 .font(.largeTitle)
                 .fontWeight(.heavy)
@@ -43,25 +30,22 @@ struct ContentView: View {
             
             Spacer()
             
-            
-            HStack {
-                Button("Awsome") {
-                    //this is the action preformed when the button is pressed
-                    messageString = "You Are Awsome!"
-                }
-                .buttonStyle(.borderedProminent)
-                
-                Spacer()
-                
-                
-                Button("Great") {
-                    messageString = "You Are Great!"
-                }
-                .buttonStyle(.borderedProminent)
-            }
-            .padding()
+            Button("Show message") {
+              messageString = (messageString == message1 ? message2 : message1)
+                // this is the action performed when the button is pressed
+//                if messageString == message1 {
+//                    messageString = message2
+//                } else {
+//                    messageString = message1
+//                }
+   }
+               
+            .buttonStyle(.borderedProminent)
+        
             
         }
+        .padding()
+        
     }
 }
 
