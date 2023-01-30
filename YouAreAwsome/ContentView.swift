@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var messageString = " " //comment
+    @State private var messageString = " "
     @State private var imageName = ""
     @State private var imageNumber = 0
     @State private var messageNumber = 0
